@@ -68,12 +68,15 @@ var intents = new builder.IntentDialog({ recognizers: [recognizer] })
 .matches('樂趣', (session) => {
  session.send('我喜歡做瑜珈\.');
 })
-matches('食物', (session) => {
+.matches('食物', (session) => {
  session.send('我喜歡吃義大利麵\.');
+})
+.matches('專長', (session) => {
+ session.send('我很認真學習，遇到不會的東西，會努力找辦法知道解答\.');
 })
 
 .onDefault((session) => {
-      session.send( '你可以問我我的興趣、喜歡吃的食物\.', session.message.text);
+      session.send( '你可以問我我的興趣、喜歡吃的食物跟我的專長\.', session.message.text);
  
 });
 
