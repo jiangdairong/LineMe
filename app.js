@@ -71,11 +71,9 @@ var intents = new builder.IntentDialog({ recognizers: [recognizer] })
 matches('食物', (session) => {
  session.send('我喜歡吃義大利麵\.');
 })
-matches('', (session) => {
- session.send('我喜歡吃義大利麵\.');
-})
+
 .onDefault((session) => {
-      session.send( '你可以問我我的興趣、年齡、\.', session.message.text);
+      session.send( '你可以問我我的興趣、喜歡吃的食物\.', session.message.text);
  
 });
 
